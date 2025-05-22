@@ -14,3 +14,9 @@ def toqmi_juftmi(son):
 def sozlar_soni(matn):
     return len(matn.split())
 
+def faktorial(n):
+    if n == 0 or n == 1:
+        return 1
+    return n * faktorial(n - 1)
+
+
