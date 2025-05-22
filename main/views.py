@@ -10,3 +10,7 @@ def toqmi_juftmi(son):
         return "Juft"
     else:
         return "Toq"
+
+def sozlar_soni(matn):
+    return len(matn.split())
+
