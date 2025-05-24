@@ -22,4 +22,10 @@ def musbat_sonlar(royxat):
     return [son for son in royxat if son > 0]
 
 
+from rest_framework import viewsets
+from .models import Task
+from .serializers import TaskSerializer
 
+class TaskViewSet(viewsets.ModelViewSet):
+    queryset = Task.objects.all()
+    serializer_class = TaskSerializer
