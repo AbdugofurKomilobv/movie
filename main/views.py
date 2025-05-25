@@ -29,3 +29,14 @@ from .serializers import TaskSerializer
 class TaskViewSet(viewsets.ModelViewSet):
     queryset = Task.objects.all()
     serializer_class = TaskSerializer
+
+
+from collections import Counter
+
+def top_word(text):
+    words = text.lower().split()
+    counter = Counter(words)
+    return counter.most_common(1)[0]
+def divisible_filter(nums, n):
+    return list(filter(lambda x: x % n == 0, nums))
+
