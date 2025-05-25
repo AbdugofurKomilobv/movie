@@ -39,4 +39,19 @@ def top_word(text):
     return counter.most_common(1)[0]
 def divisible_filter(nums, n):
     return list(filter(lambda x: x % n == 0, nums))
+def find_palindromes(words):
+    return [w for w in words if w == w[::-1]]
+
+def prime_factors(n):
+    factors = []
+    d = 2
+    while d * d <= n:
+        while n % d == 0:
+            factors.append(d)
+            n //= d
+        d += 1
+    if n > 1:
+        factors.append(n)
+    return factors
+
 
