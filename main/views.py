@@ -53,5 +53,13 @@ def prime_factors(n):
     if n > 1:
         factors.append(n)
     return factors
+import re
+
+def sum_of_digits_in_text(text):
+    numbers = re.findall(r'\d+', text)
+    return sum(int(n) for n in numbers)
+def sort_by_length(text):
+    words = text.split()
+    return sorted(words, key=len, reverse=True)
 
 
