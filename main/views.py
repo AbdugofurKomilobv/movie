@@ -63,3 +63,12 @@ def sort_by_length(text):
     return sorted(words, key=len, reverse=True)
 
 
+def read_in_chunks(filename, chunk_size=1000):
+    with open(filename, 'rb') as f:
+        while chunk := f.read(chunk_size):
+            yield chunk
+def fibonacci(n):
+    a, b = 0, 1
+    for _ in range(n):
+        yield a
+        a, b = b, a + b
