@@ -51,5 +51,13 @@ class Message(models.Model):
     content = models.TextField()
     timestamp = models.DateTimeField(auto_now_add=True)
 
+class Task(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    title = models.CharField(max_length=200)
+    description = models.TextField(blank=True)
+    deadline = models.DateTimeField(null=True, blank=True)
+    is_done = models.BooleanField(default=False)
+
+
 
 
